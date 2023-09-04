@@ -47,7 +47,7 @@ export const updateSearchParams = (type: string, value: string) => {
 export async function fetchCars(filters : FilterProps){
     const { manufacturer, year, fuel, limit, model } = filters;
     const headers = {
-        'X-RapidAPI-Key': '395127c916mshf6da1ab643b93d3p1ccc68jsne2cabe4db79b',
+        'X-RapidAPI-Key': `${process.env.NEXT_PUBLIC_RAPID_API}`,
         'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
     let res;
